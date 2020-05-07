@@ -102,7 +102,7 @@ def two(input):
 
 def three(arg1):
 	if arg1 % 3 == 0 and arg1 % 5 == 0:
-		return "fizbuzz"
+		return "fizzbuzz"
 	elif arg1 % 5 == 0:
 		return "buzz"
 	elif arg1 % 3 == 0:
@@ -179,7 +179,7 @@ def five(input):
 	mylist = list( dict.fromkeys(a1)) 		
 	return mylist
 
-print(five("Bert,boolean.py,False,1447,Bert,conditions.py,False,1318,Jeff,loops.py,False,1445"))
+
 
 	# <QUESTION 6>
 
@@ -212,10 +212,7 @@ def six(input):
 			
 	return True
 
-print(six("ceiling"))
-print(six("believe"))
-print(six("glacier"))
-print(six("height"))
+
 
 	# <QUESTION 7>
 
@@ -236,8 +233,7 @@ def seven(input):
 
 	return sum(map1)
 
-print(seven("Hello"))
-print(seven("hEelLoooO"))
+
 	# <QUESTION 8>
 
 	# Write a function which takes an input (between 1 and 10 inclusive) and multiplies it by all the numbers before it.
