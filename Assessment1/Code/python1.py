@@ -170,13 +170,16 @@ def four(arg1):
 
 def five(input):
 	list1 = input.split(',')
-    #a1 = []
-	return []
-#	for i in range(len(list1)):
-#		if list1[i] == 'False':
-#			a1.append(list1[i-2])
-        
-    
+	a1 = []
+		
+	for i in range(len(list1)):
+		if list1[i] == 'False':
+			a1.append(list1[i-2])
+
+	mylist = list( dict.fromkeys(a1)) 		
+	return mylist
+
+print(five("Bert,boolean.py,False,1447,Bert,conditions.py,False,1318,Jeff,loops.py,False,1445"))
 
 	# <QUESTION 6>
 
@@ -199,20 +202,20 @@ def five(input):
 def six(input):
 
 	for i in range(len(input)-1):
-		if input[i:i+1] == 'ie' or input[i:i+1] == 'ei':
-			if input[i:i+1] == 'ie' and (input[i-1] != 'c' or i == 0):
+		if input[i:i+2] == 'ie' or input[i:i+2] == 'ei':
+			if input[i:i+2] == 'ie' and (input[i-1] != 'c' or i == 0):
 				return True
-			elif input[i:i+1] == 'ei' and input[i-1] == 'c':
+			elif input[i:i+2] == 'ei' and input[i-1] == 'c':
 				return True
 			else:
 				return False
-        
-#    return True
+			
+	return True
 
-#print(six("ceiling"))
-#print(six("believe"))
-#print(six("glacier"))
-#print(six("height"))
+print(six("ceiling"))
+print(six("believe"))
+print(six("glacier"))
+print(six("height"))
 
 	# <QUESTION 7>
 
@@ -229,8 +232,12 @@ def six(input):
 	# How do we ignore case in a String? help(str) may offer some insight.
 
 def seven(input):
-    return 0
+	map1 = map(input.lower().count, "aeiou")
 
+	return sum(map1)
+
+print(seven("Hello"))
+print(seven("hEelLoooO"))
 	# <QUESTION 8>
 
 	# Write a function which takes an input (between 1 and 10 inclusive) and multiplies it by all the numbers before it.
@@ -268,7 +275,9 @@ def eight(input):
 	# Take a look at the documentation for Strings, List and range.
 
 def nine(inputString, char):
-	return -1
+	s1 = inputString.replace(" ", "")
+	return s1.index(char) 
+	
 
 	# <QUESTION 10>
 
@@ -288,4 +297,11 @@ def nine(inputString, char):
 	# How do we find the length of a container, take a look at help(len), you will also need to look at help(str) for String manipulation.
  
 def ten(string, int, char):
-	return False
+	s1 = string.lower().replace(" ", "")
+	if len(s1) < int -1:
+		return False
+	elif s1[int -1] == char:
+		return True
+	else:
+		return False
+
